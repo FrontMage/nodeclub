@@ -10,13 +10,13 @@ var config = {
 
   get mini_assets() { return !this.debug; }, // 是否启用静态文件的合并压缩，详见视图中的Loader
 
-  name: 'Nodeclub', // 社区名字
-  description: 'CNode：Node.js专业中文社区', // 社区的描述
-  keywords: 'nodejs, node, express, connect, socket.io',
+  name: 'GeneTell', // 社区名字
+  description: 'GTell:GeneTell专业中文社区', // 社区的描述
+  keywords: 'genetic, risk, fast, accurate, impressive',
 
   // 添加到 html head 中的信息
   site_headers: [
-    '<meta name="author" content="EDP@TAOBAO" />'
+    '<meta name="xbg" content="EDP@TAOBAO" />'
   ],
   site_logo: '/public/images/cnodejs_light.svg', // default is `name`
   site_icon: '/public/images/cnode_icon_32.png', // 默认没有 favicon, 这里填写网址
@@ -39,8 +39,8 @@ var config = {
   db_name: 'node_club_dev',
 
 
-  session_secret: 'node_club_secret', // 务必修改
-  auth_cookie_name: 'node_club',
+  session_secret: 'xbg-session', // 务必修改
+  auth_cookie_name: 'WP-SESSION',
 
   // 程序运行的端口
   port: 3000,
@@ -53,15 +53,15 @@ var config = {
 
   // RSS配置
   rss: {
-    title: 'CNode：Node.js专业中文社区',
-    link: 'http://cnodejs.org',
+    title: 'GTell：GeneTell专业中文社区',
+    link: 'http://genetell.com',
     language: 'zh-cn',
-    description: 'CNode：Node.js专业中文社区',
+    description: 'GTell：GeneTell专业中文社区',
     //最多获取的RSS Item数量
     max_rss_items: 50
   },
 
-  // 邮箱配置
+  // 邮箱配置       //todo change to QQ mailbox configures
   mail_opts: {
     host: 'smtp.126.com',
     port: 25,
@@ -78,7 +78,7 @@ var config = {
   // admin 可删除话题，编辑标签，设某人为达人
   admins: { user_login_name: true },
 
-  // github 登陆的配置
+  // github 登陆的配置       //todo remove github login
   GITHUB_OAUTH: {
     clientID: 'your GITHUB_CLIENT_ID',
     clientSecret: 'your GITHUB_CLIENT_SECRET',
@@ -87,10 +87,10 @@ var config = {
   // 是否允许直接注册（否则只能走 github 的方式）
   allow_sign_up: true,
 
-  // newrelic 是个用来监控网站性能的服务
+  // newrelic 是个用来监控网站性能的服务     //todo not sure what does this do
   newrelic_key: 'yourkey',
 
-  //7牛的access信息，用于文件上传
+  //7牛的access信息，用于文件上传      //todo seems an account is needed
   qn_access: {
     accessKey: 'your access key',
     secretKey: 'your secret key',
@@ -98,7 +98,7 @@ var config = {
     domain: 'http://{bucket}.qiniudn.com'
   },
 
-  //文件上传配置
+  //文件上传配置      //todo verify this
   //注：如果填写 qn_access，则会上传到 7牛，以下配置无效
   upload: {
     path: path.join(__dirname, 'public/upload/'),
@@ -109,10 +109,10 @@ var config = {
   tabs: [
     ['share', '分享'],
     ['ask', '问答'],
-    ['job', '招聘'],
+    ['feedback', '反馈'],
   ],
 
-  // 极光推送
+  // 极光推送       //todo remove this
   jpush: {
     appKey: 'YourAccessKeyyyyyyyyyyyy',
     masterSecret: 'YourSecretKeyyyyyyyyyyyyy',
